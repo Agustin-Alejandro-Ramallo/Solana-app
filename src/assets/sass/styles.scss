@@ -1,0 +1,497 @@
+@import '../variables/main';
+@include resetStyles;
+
+.principalWrapper {
+    @media (min-width: 200px) and (max-width: 480px){
+        width: 100%;
+    }
+
+    @media (min-width: 1200px){
+        width: 1200px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    max-width: 100%;
+    background-color: $nav-gray;
+    border-bottom: solid 1px #fff;
+    @media (min-width: 200px) and (max-width: 480px) {
+        height: 65px;
+    }
+    .principalWrapper {
+        @include orderFlex(row, space-between, center);
+    }
+
+    .logo {
+        @include imageSize(8rem, auto);
+        
+        @media(min-width: 200px) and (max-width: 480px){
+            @include imageSize(8rem, auto);
+            margin-left: -35px;
+            max-width: 100vh;
+            max-height: 100vh;
+        }
+    }
+
+    nav {
+        width: 70%;
+
+        @media (min-width: 200px) and (max-width: 480px) {
+            display: none;
+        }
+
+        @media (min-width: 1200px) {
+            display: block;
+        }
+        ul {
+            @include orderFlex(row, space-around, center);
+        }
+
+        li {
+            
+
+            a {
+                
+                font-weight: 700;
+                color: $main-white;
+                &:hover{
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    transition: .1s all;
+                }
+            }
+
+            &:nth-of-type(4){
+                div {
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}
+.porta {
+    max-width: 100%;
+    
+    //padding:1rem 1rem 8rem 1rem;
+    height: 90vh;
+    background-image: url(../img/SolanaPortada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include orderFlex(row, space-between, center);
+    @media(min-width: 200px) and (max-width: 480px){
+        padding: 0 2rem;
+    }
+   
+    h1 {
+        color: $main-white;
+        font-weight: 200;
+        line-height: 1.2;
+        font-family: 'Montserrat', 'sans-serif';
+        @media(min-width: 200px) and (max-width: 480px){
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        color: $main-white;
+        margin-top: -6px;
+        @media(min-width: 200px) and (max-width: 480px){
+            font-size: 14px;
+            margin-top: -4px;
+            text-align: center;
+            margin-bottom: 33px;
+            padding: 3px 50px;
+
+        }
+    }
+    .button{
+        width: 190px;
+        height: 43px;
+        border-radius: 22px;
+        background: #f98c00;
+        box-shadow: 0 0 1px 0 #ffffff inset, 0 0 1px 0 #ffffff;
+        text-align: center;
+        &:hover{
+            background: #FF9711;
+            transition: .1s all;
+        }
+        
+        @media(min-width: 200px) and (max-width: 480px){
+            margin: 0 auto;
+        }
+        
+    }
+    .button a {
+        width: 100%;
+        height: 100%;
+        line-height: 43px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        z-index: 1;
+        @media(min-width: 200px) and (max-width: 480px){
+            font-size: 14px;
+        }
+    }
+    
+}
+
+.about{
+    max-width: 100%;
+    
+    padding:1rem 1rem 8rem 1rem;
+
+    background: $main-white;
+    @include orderFlex(row, space-between, center);
+    
+    @media(min-width: 200px) and (max-width: 480px){
+        @include orderFlex(column, space-between, center);
+        padding: 0 2rem;
+    }
+    .about-content{
+        padding-top: 64px;
+        p:nth-of-type(1) {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $main-orange;
+            line-height: 0.75;
+            
+        } 
+        h2 {
+            font-weight: 400;
+            line-height: 1.2;
+            font-family: 'Montserrat', 'sans-serif';
+            span{
+                font-weight: 600;
+            }
+            @media(min-width: 200px) and (max-width: 480px){
+                font-size: 48px;
+            }
+            
+        }
+        p:nth-of-type(2){
+            font-size: 16px;
+            font-weight: 600;
+            color: #535353;
+            line-height: 1.75;
+            margin-top: 35px;
+            @media(min-width: 200px) and (max-width: 480px){
+                font-size: 15px;
+            }
+        }
+        p:nth-of-type(3) {
+            font-size: 14px;
+            line-height: 2;
+            font-weight: 400;
+            color: #535353;
+            margin-top: 28px;
+        
+            @media(min-width: 200px) and (max-width: 480px){
+                font-size: 13px;
+            }
+            
+        }
+    }
+    .about-image{
+        
+        .jugadores-padel{
+            
+            @include imageSize(8rem, auto);
+            @media(min-width: 200px) and (max-width: 480px){
+                @include imageSize(13rem, auto);
+                margin-top: 3rem;
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description {
+    @include orderFlex(column, center, center);
+   
+    padding: 8rem 0;
+
+    .principalWrapper {
+        @include orderFlex(column, center, center);
+    }
+
+    div {
+        @include orderFlex(column, center, center);
+        text-align: center;
+
+        h2 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+           
+        }
+
+        span {
+            color: $main-white;
+            font-size: 1.5rem;
+        }
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6rem;
+
+        li {
+            @include orderFlex(column, center, center);
+            text-align: center;
+
+            div {
+                width: 6rem;
+            }
+
+            p {
+                color: $main-white;
+                margin-top: 2rem;
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+}
+
+.listProducts {
+    @include orderFlex(column, center, center);
+    background: $main-white;
+    padding: 8rem 0;
+    text-align: center;
+
+    .principalWrapper {
+        @include orderFlex(column, center, center);
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        
+    }
+
+    ul {
+        width: 100%;
+        margin-top: 7rem;
+        @include orderFlex(row, space-between, center);
+        flex-wrap: wrap;
+
+        li {
+            flex:  0 0 270px;
+            @include orderFlex(column, center, center);
+            background: $main-white;
+            border-radius: 3rem;
+            padding: 2.5rem;
+            margin-bottom: 5rem;
+            box-shadow: 2px 0px 17px 2px rgba($main-black,0.30);
+            position: relative;
+
+            div {
+                @include imageSize(14rem, auto);
+            }
+
+            span {
+                &:first-of-type {
+                    
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    margin-top: 1.9rem;
+                }
+
+                &:last-of-type {
+                    
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin: 2rem 0;
+                }
+            }
+
+            button {
+                
+                color: $main-black;
+                text-transform: uppercase;
+                padding: 0.8rem 4rem;
+                font-size: 1.1rem;
+                font-weight: 700;
+                font-family: 'Lato', sans-serif;
+                border: none;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                &.disabled {
+                    
+                    color: $main-white;
+                    cursor: no-drop;
+                }
+            }
+
+            .outStock {
+               
+                color: $main-white;
+                position: absolute;
+                top: 1rem;
+                z-index: 0;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                padding: 0.8rem 0;
+            }
+        }
+    }
+}
+
+.cartList {
+    @include orderFlex(column, center, center);
+    padding: 8rem 0;
+    text-align: center;
+    
+
+    .principalWrapper {
+        @include orderFlex(column, center, center);
+    }
+
+    h2 {
+        font-size: 3.5rem;
+       
+    }
+
+    p {
+        font-size: 1.5rem;
+        
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .cart-wrapper {
+        width: 70%;
+        background: $main-white;
+        padding: 2rem;
+        border-radius: 1rem;
+        
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+        }
+
+        .cart-item-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-left: 1rem;
+            }
+        }
+
+        .item-img{
+            width: 50px;
+        }
+
+        .total-items {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.6rem;
+            
+            margin-top: 2rem;
+            padding-top: 1rem;
+        }
+
+        .total-items {
+            @include orderFlex(row, flex-end, flex-end);
+        }
+
+        button {
+           
+            font-weight: 700;
+            font-size: 2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+    }
+}
+
+footer {
+    @include orderFlex(column, center, center);
+    padding: 8rem 0 4rem 0;
+  
+    color: $main-white;
+    text-transform: uppercase;
+
+    .principalWrapper {
+        @include orderFlex(column, center, center);
+    }
+
+    .title {
+        @include imageSize(30rem, auto);
+        margin-bottom: 4rem;
+    }
+
+    section {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1.8rem;
+            }
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
