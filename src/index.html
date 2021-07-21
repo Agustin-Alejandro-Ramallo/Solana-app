@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel='stylesheet' href='https://cdn.linearicons.com/free/1.0.0/icon-font.min.css'><link rel="stylesheet" href="./style.css">
     <title>Solana App</title>
 </head>
 <body>
@@ -70,21 +72,42 @@
         </section>
         <section class="deportes">
             <h2>Deportes</h2>
-            <article class="card">
-                <div class="thumb"></div>
-                <div class="infos">
-                    <h2 class="title">new york city<span class="flag"></span></h2>
-                    <h3 class="date">november 2 - 4</h3>
-                    <h3 class="seats">seats remaining: 2</h3>
-                    <p class="txt">
-                    Join us for our Live Infinity Session in
-                    beautiful New York City. This is a 3 day
-                    intensive workshop where you'll learn
-                    how to become a better version of...
-                    </p>
-                    <h3 class="details">event details</h3>
+            <div class="cards">
+                <div class="card">
+                    <div class="pic" style="background-image: url(../src/assets/img/padelOutdor.jpg)"></div>
+                    <div class="ttl">
+                        <h2 class="h2">Padel Outdoor</h2>
+                        <p class="subtitle">1 cancha de sintetico y 1 de cemento</p>
+                        <a href="#" class="btn">Alquilar</a>
+                    </div>
                 </div>
-            </article>
+                <div class="card">
+                    <div class="pic" style="background-image: url(../src/assets/img/padelIndor.jpg)"></div>
+                    <div class="ttl">
+                        <h2 class="h2">Padel Indoor</h2>
+                        <p class="subtitle">2 canchas de sintetico</p>
+                        <a href="#" class="btn">Alquilar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic" style="background-image: url(../src/assets/img/futbol.jpg)"></div>
+                    <div class="ttl">
+                        <h2 class="h2">Futbol</h2>
+                        <p class="subtitle">Una cancha de sintetico para futbol 7</p>
+                        <a href="#" class="btn">Alquilar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic" style="background-image: url(../src/assets/img/beachVoley.jpg)"></div>
+                    <div class="ttl">
+                        <h2 class="h2">Beach Voley</h2>
+                        <p class="subtitle">Una cancha de Beach Voley con arena de Párana</p>
+                        <a href="#" class="btn">Alquilar</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </body>
 </html>
