@@ -83,36 +83,39 @@ header .logo {
     max-height: 100vh;
   }
 }
-header nav {
-  width: 70%;
+@media (min-width: 200px) and (max-width: 480px) {
+  header .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 }
 @media (min-width: 200px) and (max-width: 480px) {
-  header nav {
-    display: none;
+  header .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
   }
 }
-@media (min-width: 1200px) {
-  header nav {
-    display: block;
+@media (min-width: 200px) and (max-width: 480px) {
+  header .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-header nav li a {
-  font-weight: 700;
-  color: #F7F7F7;
-}
-header nav li a:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-  transition: 0.1s all;
-}
-header nav li:nth-of-type(4) div {
-  width: 2rem;
 }
 
 .porta {
@@ -263,20 +266,57 @@ header nav li:nth-of-type(4) div {
 }
 @media (min-width: 200px) and (max-width: 480px) {
   .about .about-image .jugadores-padel {
-    width: 13rem;
+    width: 28rem;
     height: auto;
-    margin-top: 3rem;
+    padding-top: 3rem;
   }
 }
 
+.deportes {
+  background-image: url(../img/comedorSolana.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 244px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.deportes h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Montserrat", "sans-serif";
+  color: #F7F7F7;
+  font-size: 72px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+@media (min-width: 200px) and (max-width: 480px) {
+  .deportes h2 {
+    font-size: 48px;
+  }
+}
+.deportes p {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FF9711;
+  line-height: 0.75;
+}
 .deportes .cards {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  max-width: 1170px;
+  max-width: 100%;
   margin: 0 auto;
   grid-gap: 9px;
   align-items: center;
   width: 100%;
+  padding-bottom: 2rem;
+}
+@media (min-width: 200px) and (max-width: 480px) {
+  .deportes .cards {
+    grid-template-columns: 70%;
+    justify-content: center;
+  }
 }
 .deportes .cards .card {
   max-width: 100%;
@@ -284,8 +324,14 @@ header nav li:nth-of-type(4) div {
   overflow: hidden;
   border-radius: 12px;
   position: relative;
-  box-shadow: 0 0 9px #eee;
+  box-shadow: 0 0 3px #eee;
   transition: all ease 0.6s;
+  margin-top: 2rem;
+}
+@media (min-width: 200px) and (max-width: 480px) {
+  .deportes .cards .card {
+    max-width: 100%;
+  }
 }
 .deportes .cards .card .pic {
   position: absolute;
@@ -333,6 +379,7 @@ header nav li:nth-of-type(4) div {
   transform: translateY(-12px);
 }
 .deportes .cards .card .ttl h2 {
+  font-family: "Montserrat", "sans-serif";
   font-size: 21px;
   color: #FF9711;
   font-weight: bold;
@@ -350,8 +397,14 @@ header nav li:nth-of-type(4) div {
 .deportes .cards .card .ttl p {
   color: #F7F7F7;
 }
+@media (min-width: 200px) and (max-width: 480px) {
+  .deportes .cards .card .ttl p {
+    font-size: 11px;
+    line-height: 1.75;
+  }
+}
 .deportes .cards .card .ttl .subtitle a {
-  font-family: Roboto;
+  font-family: "Montserrat", "sans-serif";
   width: 60%;
   margin: 0 auto;
   line-height: 22px;
@@ -376,6 +429,60 @@ header nav li:nth-of-type(4) div {
 .deportes .cards .card .ttl .btn:hover {
   width: 120px;
   background: rgba(255, 165, 0, 0.36);
+}
+
+.otrosServicios {
+  background: #F7F7F7;
+  padding: 3rem;
+}
+.otrosServicios h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Montserrat", "sans-serif";
+  color: #535353;
+  font-size: 72px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+@media (min-width: 200px) and (max-width: 480px) {
+  .otrosServicios h2 {
+    font-size: 48px;
+  }
+}
+.otrosServicios p:first-child {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FF9711;
+  line-height: 0.75;
+}
+.otrosServicios ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.otrosServicios ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.otrosServicios ul li:last-child {
+  margin-bottom: 0;
+}
+.otrosServicios ul li h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #FF9711;
+}
+.otrosServicios ul li p {
+  font-size: 13px;
+  color: #535353;
+}
+.otrosServicios ul li div:first-child {
+  width: 10rem;
 }
 
 .description {
